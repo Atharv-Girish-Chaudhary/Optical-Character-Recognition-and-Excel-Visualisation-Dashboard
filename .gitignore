@@ -1,21 +1,84 @@
-.gradle
-**/build/
-!src/**/build/
+# macOS system files and metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
 
-# Ignore Gradle GUI config
-gradle-app.setting
+# Windows system files
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
+# IDE-specific files
+.vscode/
+.idea/
+.settings/
 
-# Avoid ignore Gradle wrappper properties
-!gradle-wrapper.properties
+# Python-related files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+env/
+.ipynb_checkpoints/
 
-# Cache of project
-.gradletasknamecache
+# Node.js
+node_modules/
 
-# Eclipse Gradle plugin generated files
-# Eclipse Core
-.project
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
+# Java
+*.class
+bin/
+target/
+
+# Compiled files and executables
+*.dll
+*.exe
+*.o
+*.so
+*.dylib
+
+# TypeScript, Sass, and Less
+*.js.map
+*.css.map
+.sass-cache/
+
+# Ruby gems
+*.gem
+
+# LaTeX and related outputs
+*.aux
+*.log
+*.out
+*.toc
+*.pdf
+*.dvi
+*.ps
+*.svg
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# General logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Miscellaneous
+*.bak
+*.old
+*.orig
+
+# Exclude sensitive or config files
+*.env
+*.env.local
+*.env.*.local
+
+

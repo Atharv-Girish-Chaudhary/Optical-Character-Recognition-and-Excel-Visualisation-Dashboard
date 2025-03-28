@@ -1,0 +1,157 @@
+Invoice Date ,Invoice Number ,Customer Name ,Country ,State          ,City       ,Manufacturer ,Item Code  ,Product Group         ,Invoice Quantity ,Net Sales Amount ,Gross Margin ,Currency
+02-01-2022   ,CH-2022-1      ,Emily F       ,India   ,Maharashtra    ,Pune       ,USA          ,USLWO1     ,Leather Watch         ,"1
+                                                                                                                                   "                ,          125000 ,       25000 ,INR
+03-01-2022   ,CH-2022-2      ,Lynsey R      ,India   ,West Bengal    ,Kolkata    ,Germany      ,GERSSWO01  ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           75000 ,       18750 ,INR
+04-01-2022   ,CH-2022-3      ,David F       ,India   ,Tamil Nadu     ,Chennai    ,USA          ,USPWO1     ,Pocket Watch          ,"1
+                                                                                                                                   "                ,           60000 ,       24000 ,INR
+05-01-2022   ,CH-2022-4      ,Martha R      ,India   ,Maharashtra    ,Nashik     ,Switzerland  ,SWLWO1     ,Leather Watch         ,"1
+                                                                                                                                   "                ,           73000 ,       14600 ,INR
+01-02-2022   ,CH-2022-5      ,Derek S       ,India   ,New Delhi      ,Gurgaon    ,Sweden       ,SWDRSSW01  ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           25000 ,        6250 ,INR
+02-02-2022   ,CH-2022-6      ,Kamesha P     ,India   ,Goa            ,Panjim     ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,          110000 ,       22000 ,INR
+03-02-2022   ,CH-2022-7      ,Matt M        ,India   ,Gujarat        ,Surat      ,USA          ,USSSWO01   ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           55000 ,       13750 ,INR
+04-02-2022   ,CH-2022-8      ,Mary S        ,India   ,Uttar Pradesh  ,Bihar      ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,           45000 ,        9000 ,INR
+01-03-2022   ,CH-2022-9      ,Isam M        ,India   ,Punjab         ,Chandigarh ,Switzerland  ,SWSSWO01   ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           75000 ,       18750 ,INR
+02-03-2022   ,CH-2022-10     ,Michael Y     ,India   ,Andhra Pradesh ,Hyderabad  ,USA          ,USPWO1     ,Pocket Watch          ,"1
+                                                                                                                                   "                ,          120000 ,       48000 ,INR
+03-03-2022   ,CH-2022-11     ,Ryan D        ,India   ,Maharashtra    ,Mumbai     ,Switzerland  ,SWSSW01    ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           65000 ,       16250 ,INR
+01-04-2022   ,CH-2022-12     ,Matt M        ,India   ,Maharashtra    ,Pune       ,Sweden       ,SWDLWO1    ,Leather Watch         ,"1
+                                                                                                                                   "                ,          116000 ,       23200 ,INR
+02-04-2022   ,CH-2022-13     ,Dario F       ,India   ,West Bengal    ,Kolkata    ,USA          ,USSSW01    ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           25000 ,        6250 ,INR
+03-04-2022   ,CH-2022-14     ,Melisa M      ,India   ,Tamil Nadu     ,Chennai    ,Sweden       ,SWDLWO1    ,Leather Watch         ,"1
+                                                                                                                                   "                ,           98000 ,       19600 ,INR
+01-05-2022   ,CH-2022-15     ,Isam M        ,India   ,Maharashtra    ,Nashik     ,USA          ,USSSWO01   ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           55000 ,       13750 ,INR
+02-05-2022   ,CH-2022-16     ,Michael Y     ,India   ,New Delhi      ,Gurgaon    ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,           62000 ,       12400 ,INR
+03-05-2022   ,CH-2022-17     ,Isam M        ,India   ,Goa            ,Panjim     ,Sweden       ,SWDRSSW01  ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           75000 ,       18750 ,INR
+01-06-2022   ,CH-2022-18     ,Sharvari J    ,India   ,Gujarat        ,Surat      ,USA          ,USLWO1     ,Leather Watch         ,"1
+                                                                                                                                   "                ,           73000 ,       14600 ,INR
+02-06-2022   ,CH-2022-19     ,Jeremy G      ,India   ,Uttar Pradesh  ,Bihar      ,Sweden       ,SWDRSSWO01 ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           25000 ,        6250 ,INR
+03-06-2022   ,CH-2022-20     ,Tom S         ,India   ,Punjab         ,Chandigarh ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,          118000 ,       23600 ,INR
+04-06-2022   ,CH-2022-21     ,Kamesha P     ,India   ,Andhra Pradesh ,Hyderabad  ,USA          ,USSSWO01   ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           73000 ,       18250 ,INR
+01-07-2022   ,CH-2022-22     ,Cain R        ,India   ,Maharashtra    ,Mumbai     ,Switzerland  ,SWPWO01    ,Pocket Watch          ,"1
+                                                                                                                                   "                ,           48000 ,       19200 ,INR
+02-07-2022   ,CH-2022-23     ,Dario F       ,India   ,Maharashtra    ,Pune       ,USA          ,USSSWO1    ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           32000 ,        8000 ,INR
+03-07-2022   ,CH-2022-24     ,Nathan O      ,India   ,West Bengal    ,Kolkata    ,Switzerland  ,SWLWO1     ,Leather Watch         ,"1
+                                                                                                                                   "                ,          145000 ,       29000 ,INR
+04-07-2022   ,CH-2022-25     ,Brooke L      ,India   ,Tamil Nadu     ,Chennai    ,Sweden       ,SWDRSSW01  ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           55000 ,       13750 ,INR
+01-08-2022   ,CH-2022-26     ,Kamesha P     ,India   ,Maharashtra    ,Nashik     ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,           47000 ,        9400 ,INR
+02-08-2022   ,CH-2022-27     ,Erica K       ,India   ,New Delhi      ,Gurgaon    ,USA          ,USPWO1     ,Pocket Watch          ,"1
+                                                                                                                                   "                ,           66000 ,       26400 ,INR
+03-08-2022   ,CH-2022-28     ,Julie X       ,India   ,Goa            ,Panjim     ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,           72000 ,       14400 ,INR
+01-09-2022   ,CH-2022-29     ,Angelica R    ,India   ,Gujarat        ,Surat      ,Sweden       ,SWDRSSWO01 ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,          125000 ,       31250 ,INR
+02-09-2022   ,CH-2022-30     ,Michael Y     ,India   ,Uttar Pradesh  ,Bihar      ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,           90000 ,       18000 ,INR
+03-09-2022   ,CH-2022-31     ,Christina G   ,India   ,Punjab         ,Chandigarh ,Sweden       ,SWDRSSW01  ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           88000 ,       22000 ,INR
+01-10-2022   ,CH-2022-32     ,Brianna D     ,India   ,Andhra Pradesh ,Hyderabad  ,Switzerland  ,SWLWO1     ,Leather Watch         ,"1
+                                                                                                                                   "                ,           75000 ,       15000 ,INR
+02-10-2022   ,CH-2022-33     ,Michael Y     ,India   ,Maharashtra    ,Mumbai     ,Germany      ,GERSSW01   ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           42000 ,       10500 ,INR
+03-10-2022   ,CH-2022-34     ,Tyler H       ,India   ,Maharashtra    ,Pune       ,Switzerland  ,SWLWO1     ,Leather Watch         ,"1
+                                                                                                                                   "                ,           98000 ,       19600 ,INR
+01-11-2022   ,CH-2022-35     ,Angelica R    ,India   ,West Bengal    ,Kolkata    ,Sweden       ,SWDRSSWO01 ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           72000 ,       18000 ,INR
+02-11-2022   ,CH-2022-36     ,Tony S        ,India   ,Tamil Nadu     ,Chennai    ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,          112000 ,       22400 ,INR
+03-11-2022   ,CH-2022-37     ,Jim H         ,India   ,Maharashtra    ,Nashik     ,USA          ,USSSWO01   ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           85000 ,       21250 ,INR
+01-12-2022   ,CH-2022-38     ,Jay N         ,India   ,New Delhi      ,Gurgaon    ,Switzerland  ,SWLWO1     ,Leather Watch         ,"1
+                                                                                                                                   "                ,           87000 ,       17400 ,INR
+02-12-2022   ,CH-2022-39     ,Vivien K      ,India   ,Goa            ,Panjim     ,Germany      ,GERSSW01   ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           66000 ,       16500 ,INR
+02-01-2022   ,CH-2022-1      ,Emily F       ,India   ,Maharashtra    ,Pune       ,USA          ,USLWO1     ,Leather Watch         ,"1
+                                                                                                                                   "                ,          125000 ,       25000 ,INR
+03-01-2022   ,CH-2022-2      ,Lynsey R      ,India   ,West Bengal    ,Kolkata    ,Germany      ,GERSSWO01  ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           75000 ,       18750 ,INR
+04-01-2022   ,CH-2022-3      ,David F       ,India   ,Tamil Nadu     ,Chennai    ,USA          ,USPWO1     ,Pocket Watch          ,"1
+                                                                                                                                   "                ,           60000 ,       24000 ,INR
+05-01-2022   ,CH-2022-4      ,Martha R      ,India   ,Maharashtra    ,Nashik     ,Switzerland  ,SWLWO1     ,Leather Watch         ,"1
+                                                                                                                                   "                ,           73000 ,       14600 ,INR
+01-02-2022   ,CH-2022-5      ,Derek S       ,India   ,New Delhi      ,Gurgaon    ,Sweden       ,SWDRSSW01  ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           25000 ,        6250 ,INR
+02-02-2022   ,CH-2022-6      ,Kamesha P     ,India   ,Goa            ,Panjim     ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,          110000 ,       22000 ,INR
+03-02-2022   ,CH-2022-7      ,Matt M        ,India   ,Gujarat        ,Surat      ,USA          ,USSSWO01   ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           55000 ,       13750 ,INR
+04-02-2022   ,CH-2022-8      ,Mary S        ,India   ,Uttar Pradesh  ,Bihar      ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,           45000 ,        9000 ,INR
+01-03-2022   ,CH-2022-9      ,Isam M        ,India   ,Punjab         ,Chandigarh ,Switzerland  ,SWSSWO01   ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           75000 ,       18750 ,INR
+02-03-2022   ,CH-2022-10     ,Michael Y     ,India   ,Andhra Pradesh ,Hyderabad  ,USA          ,USPWO1     ,Pocket Watch          ,"1
+                                                                                                                                   "                ,          120000 ,       48000 ,INR
+03-03-2022   ,CH-2022-11     ,Ryan D        ,India   ,Maharashtra    ,Mumbai     ,Switzerland  ,SWSSW01    ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           65000 ,       16250 ,INR
+01-04-2022   ,CH-2022-12     ,Matt M        ,India   ,Maharashtra    ,Pune       ,Sweden       ,SWDLWO1    ,Leather Watch         ,"1
+                                                                                                                                   "                ,          116000 ,       23200 ,INR
+02-04-2022   ,CH-2022-13     ,Dario F       ,India   ,West Bengal    ,Kolkata    ,USA          ,USSSW01    ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           25000 ,        6250 ,INR
+03-04-2022   ,CH-2022-14     ,Melisa M      ,India   ,Tamil Nadu     ,Chennai    ,Sweden       ,SWDLWO1    ,Leather Watch         ,"1
+                                                                                                                                   "                ,           98000 ,       19600 ,INR
+01-05-2022   ,CH-2022-15     ,Isam M        ,India   ,Maharashtra    ,Nashik     ,USA          ,USSSWO01   ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           55000 ,       13750 ,INR
+02-05-2022   ,CH-2022-16     ,Michael Y     ,India   ,New Delhi      ,Gurgaon    ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,           62000 ,       12400 ,INR
+03-05-2022   ,CH-2022-17     ,Isam M        ,India   ,Goa            ,Panjim     ,Sweden       ,SWDRSSW01  ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           75000 ,       18750 ,INR
+01-06-2022   ,CH-2022-18     ,Sharvari J    ,India   ,Gujarat        ,Surat      ,USA          ,USLWO1     ,Leather Watch         ,"1
+                                                                                                                                   "                ,           73000 ,       14600 ,INR
+02-06-2022   ,CH-2022-19     ,Jeremy G      ,India   ,Uttar Pradesh  ,Bihar      ,Sweden       ,SWDRSSWO01 ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           25000 ,        6250 ,INR
+03-06-2022   ,CH-2022-20     ,Tom S         ,India   ,Punjab         ,Chandigarh ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,          118000 ,       23600 ,INR
+04-06-2022   ,CH-2022-21     ,Kamesha P     ,India   ,Andhra Pradesh ,Hyderabad  ,USA          ,USSSWO01   ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           73000 ,       18250 ,INR
+01-07-2022   ,CH-2022-22     ,Cain R        ,India   ,Maharashtra    ,Mumbai     ,Switzerland  ,SWPWO01    ,Pocket Watch          ,"1
+                                                                                                                                   "                ,           48000 ,       19200 ,INR
+02-07-2022   ,CH-2022-23     ,Dario F       ,India   ,Maharashtra    ,Pune       ,USA          ,USSSWO1    ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           32000 ,        8000 ,INR
+03-07-2022   ,CH-2022-24     ,Nathan O      ,India   ,West Bengal    ,Kolkata    ,Switzerland  ,SWLWO1     ,Leather Watch         ,"1
+                                                                                                                                   "                ,          145000 ,       29000 ,INR
+04-07-2022   ,CH-2022-25     ,Brooke L      ,India   ,Tamil Nadu     ,Chennai    ,Sweden       ,SWDRSSW01  ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           55000 ,       13750 ,INR
+01-08-2022   ,CH-2022-26     ,Kamesha P     ,India   ,Maharashtra    ,Nashik     ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,           47000 ,        9400 ,INR
+02-08-2022   ,CH-2022-27     ,Erica K       ,India   ,New Delhi      ,Gurgaon    ,USA          ,USPWO1     ,Pocket Watch          ,"1
+                                                                                                                                   "                ,           66000 ,       26400 ,INR
+03-08-2022   ,CH-2022-28     ,Julie X       ,India   ,Goa            ,Panjim     ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,           72000 ,       14400 ,INR
+01-09-2022   ,CH-2022-29     ,Angelica R    ,India   ,Gujarat        ,Surat      ,Sweden       ,SWDRSSWO01 ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,          125000 ,       31250 ,INR
+02-09-2022   ,CH-2022-30     ,Michael Y     ,India   ,Uttar Pradesh  ,Bihar      ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,           90000 ,       18000 ,INR
+03-09-2022   ,CH-2022-31     ,Christina G   ,India   ,Punjab         ,Chandigarh ,Sweden       ,SWDRSSW01  ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           88000 ,       22000 ,INR
+01-10-2022   ,CH-2022-32     ,Brianna D     ,India   ,Andhra Pradesh ,Hyderabad  ,Switzerland  ,SWLWO1     ,Leather Watch         ,"1
+                                                                                                                                   "                ,           75000 ,       15000 ,INR
+02-10-2022   ,CH-2022-33     ,Michael Y     ,India   ,Maharashtra    ,Mumbai     ,Germany      ,GERSSW01   ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           42000 ,       10500 ,INR
+03-10-2022   ,CH-2022-34     ,Tyler H       ,India   ,Maharashtra    ,Pune       ,Switzerland  ,SWLWO1     ,Leather Watch         ,"1
+                                                                                                                                   "                ,           98000 ,       19600 ,INR
+01-11-2022   ,CH-2022-35     ,Angelica R    ,India   ,West Bengal    ,Kolkata    ,Sweden       ,SWDRSSWO01 ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           72000 ,       18000 ,INR
+02-11-2022   ,CH-2022-36     ,Tony S        ,India   ,Tamil Nadu     ,Chennai    ,Germany      ,GERSLWO1   ,Leather Watch         ,"1
+                                                                                                                                   "                ,          112000 ,       22400 ,INR
+03-11-2022   ,CH-2022-37     ,Jim H         ,India   ,Maharashtra    ,Nashik     ,USA          ,USSSWO01   ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           85000 ,       21250 ,INR
+01-12-2022   ,CH-2022-38     ,Jay N         ,India   ,New Delhi      ,Gurgaon    ,Switzerland  ,SWLWO1     ,Leather Watch         ,"1
+                                                                                                                                   "                ,           87000 ,       17400 ,INR
+02-12-2022   ,CH-2022-39     ,Vivien K      ,India   ,Goa            ,Panjim     ,Germany      ,GERSSW01   ,Stainless Steel Watch ,"1
+                                                                                                                                   "                ,           66000 ,       16500 ,INR
