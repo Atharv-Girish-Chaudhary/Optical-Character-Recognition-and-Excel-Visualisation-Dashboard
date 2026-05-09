@@ -41,5 +41,5 @@ def create_sub_folder_dir(root_folder_name: str, sub_folder_name: str) -> str:
         raise Exception(f"Failed to create sub-folder '{sub_folder_name}' in '{root_folder_name}': {e}")
 
 if __name__ == "__main__":
-    create_root_folder_dir([r'testing\Test 1', r'testing\Test 2'])
-    create_sub_folder_dir(r'testing\Test 1', r'testing\Sub Test 1')
+    create_root_folder_dir([os.path.join('testing', 'Test 1'), os.path.join('testing', 'Test 2')])
+    create_sub_folder_dir(os.path.join('testing', 'Test 1'), os.path.join('testing', 'Sub Test 1'))

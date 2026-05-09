@@ -17,10 +17,12 @@ except ImportError as e:
     print(f"Import Error: {e}. Please ensure all dependencies are installed.")
     sys.exit(1)
 
-pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
-
-def iterate_files(root_input_dir=r'data\raw', root_output_dir=r'data\processed'):
+def iterate_files(root_input_dir=None, root_output_dir=None):
     """Iterates through PDF files stored in the root input directory and processes them."""
+    if root_input_dir is None:
+        root_input_dir = os.path.join('data', 'raw')
+    if root_output_dir is None:
+        root_output_dir = os.path.join('data', 'processed')
     try:
         directories.create_root_folder_dir([root_input_dir, root_output_dir])
         

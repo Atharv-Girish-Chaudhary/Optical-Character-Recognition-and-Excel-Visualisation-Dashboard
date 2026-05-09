@@ -1,11 +1,24 @@
 import customtkinter as ctk
 from PIL import Image
 import os
+import sys
+import subprocess
 from modules import file_pdf_conv
 from modules import image_table_conv
 import tkinter as tk
 from modules import dashboard
-from data import gui
+
+
+def open_file_cross_platform(path):
+    """Open a file with the OS default application (Win/Mac/Linux)."""
+    if sys.platform.startswith('win'):
+        os.startfile(path)
+    elif sys.platform == 'darwin':
+        subprocess.Popen(['open', path])
+    else:
+        subprocess.Popen(['xdg-open', path])
+
+
 class MainSoftware(ctk.CTk):
     ctk.set_appearance_mode("System")
     ctk.set_default_color_theme("blue")
@@ -27,16 +40,17 @@ class MainSoftware(ctk.CTk):
             try:
                 self.FolderButton.destroy()
                 self.MainbuttonAdd()
-            except:
+            except AttributeError:
                 try:
                     self.Mainbutton.destroy()
                     self.MainbuttonAdd()
-                except:
+                except AttributeError:
                     self.MainbuttonAdd()
 
     def FilesButton2(self):
 
-        self.files = os.listdir(r"data\raw")
+        raw_dir = os.path.join('data', 'raw')
+        self.files = os.listdir(raw_dir) if os.path.isdir(raw_dir) else []
         dir_list = '\n'.join(map(str, self.files))
         self.font = self.font = ctk.CTkFont(size=20)
 
@@ -93,24 +107,25 @@ class MainSoftware(ctk.CTk):
 
     def Progress(self):
         self.var = self.ProgressSwitchVar.get()
-        print("switch toggled, current value:", self.var)
         if self.var == 'on':
             try:
                 self.MainbuttonsRemove()
                 self.Progress_Label()
                 self.AddProgressBar()
                 tk.messagebox.showinfo("Success!", f"File Processing has started")
-                image_table_conv.iterate_files(root_input_dir= 'Files', root_output_dir='Files')
+                image_table_conv.iterate_files()
                 tk.messagebox.showinfo("Success!", f"File has been converted to Excel file")
                 self.RemoveProgress()
                 self.switch.deselect()
                 self.FolderFrame.destroy()
                 self.FolderFrame = ctk.CTkFrame(self.MainFrame, width=600, height=440, corner_radius=10,border_color='blue')
                 self.FolderFrame.grid(padx=(50, 0), pady=100)
-                os.startfile(r'Files\CreatedCsvFile.csv')
+                output_csv = os.path.join('data', 'output', 'Extracted_Table.csv')
+                if os.path.exists(output_csv):
+                    open_file_cross_platform(output_csv)
 
 
-            except:
+            except Exception:
                 self.switch.deselect()
                 tk.messagebox.showerror('File not found', 'Error: Please upload the file')
         elif self.var == 'off':
@@ -140,13 +155,13 @@ class MainSoftware(ctk.CTk):
         self.MainFrame.grid_propagate(False)
 
     def Images(self):
-        self.SideImage1 = ctk.CTkImage(light_image=Image.open('data\gui/Home.png'), size=(30, 30))
-        self.SideImage2 = ctk.CTkImage(light_image=Image.open('data\gui/Files.png'), size=(30, 30))
-        self.SideImage3 = ctk.CTkImage(light_image=Image.open('data\gui/Graph.png'), size=(30, 30))
-        self.FolderImage = ctk.CTkImage(light_image=Image.open('data\gui/MainFolder.png'), size=(600, 430))
-        self.SwitchImage = ctk.CTkImage(light_image=Image.open('data\gui/Home.png'), size=(30, 30))
-        self.ModeImage = ctk.CTkImage(light_image=Image.open('data\gui/Dark Mode.png'), size=(30, 30))
-        self.TitleImage = ctk.CTkImage(light_image=Image.open('data\gui/TitleImage.png'), size=(1040, 70))
+        self.SideImage1 = ctk.CTkImage(light_image=Image.open(os.path.join('data', 'gui', 'Home.png')), size=(30, 30))
+        self.SideImage2 = ctk.CTkImage(light_image=Image.open(os.path.join('data', 'gui', 'Files.png')), size=(30, 30))
+        self.SideImage3 = ctk.CTkImage(light_image=Image.open(os.path.join('data', 'gui', 'Graph.png')), size=(30, 30))
+        self.FolderImage = ctk.CTkImage(light_image=Image.open(os.path.join('data', 'gui', 'MainFolder.png')), size=(600, 430))
+        self.SwitchImage = ctk.CTkImage(light_image=Image.open(os.path.join('data', 'gui', 'Home.png')), size=(30, 30))
+        self.ModeImage = ctk.CTkImage(light_image=Image.open(os.path.join('data', 'gui', 'Dark Mode.png')), size=(30, 30))
+        self.TitleImage = ctk.CTkImage(light_image=Image.open(os.path.join('data', 'gui', 'TitleImage.png')), size=(1040, 70))
 
     def Buttons(self):
         self.button1 = ctk.CTkButton(self.SideFrame1, image=self.SideImage1, text='', width=30, command=self.HomeButton)
@@ -212,5 +227,5 @@ class MainSoftware(ctk.CTk):
 
 
 if __name__ == "__main__":
-    MainSoftware = MainSoftware()
-    MainSoftware.mainloop()
+    app = MainSoftware()
+    app.mainloop()

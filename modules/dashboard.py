@@ -1,6 +1,8 @@
 import pandas as pd
+import os
 import tkinter as tk
 from tkinter import ttk
+from tkinter import messagebox
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 import matplotlib.pyplot as plt
 
@@ -47,9 +49,19 @@ def create_gui(df, columns_to_exclude=None):
     label1 = tk.Label(side_frame, text='Select a column to plot:', bg="#4C2A85", fg="#FFF", font=25)
     label1.pack(padx=20)
 
-    column_names = [col for col in df.columns if col not in columns_to_exclude]
+    column_names = [
+        col for col in df.columns
+        if col not in columns_to_exclude
+        and pd.api.types.is_numeric_dtype(df[col])
+    ]
     if not column_names:
-        print("No columns available for plotting. Please check the data.")
+        print("No numeric columns available for plotting.")
+        messagebox.showinfo(
+            "No plottable data",
+            "The current data has no numeric columns to plot.\n"
+            "Run the pipeline on a table-image with numeric values, "
+            "or use the bundled sample employee data."
+        )
         return
 
     combo = ttk.Combobox(side_frame, values=column_names, width=30, font=25)
@@ -80,8 +92,17 @@ def create_gui(df, columns_to_exclude=None):
 
 def main():
     plt.rcParams["axes.prop_cycle"] = plt.cycler(color=["#4C2A85", "#BE96FF", "#957DAD", "#5E366E", "#A98CCC"])
-    file_path = r'data\raw\CreatedCsvFile.csv'
-    
+    primary_path = os.path.join('data', 'output', 'Extracted_Table.csv')
+    fallback_path = os.path.join('data', 'samples', 'employee_data.csv')
+    if os.path.exists(primary_path):
+        file_path = primary_path
+    elif os.path.exists(fallback_path):
+        file_path = fallback_path
+        print(f"Pipeline output not found, using sample data: {fallback_path}")
+    else:
+        print("No data available for dashboard. Run the pipeline first or check data/samples/.")
+        return
+
     # Read data
     df = read_data(file_path)
 

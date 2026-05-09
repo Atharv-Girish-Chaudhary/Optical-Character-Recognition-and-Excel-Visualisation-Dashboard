@@ -7,11 +7,9 @@ from PIL import Image
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 try:
-    from xls2xlsx import XLS2XLSX
     import tkinter as tk
     from tkinter import filedialog, messagebox
     from modules import directories
-    import doc2pdf
 except ImportError as e:
     print(f"Import Error: {e}. Please ensure all dependencies are installed.")
     sys.exit(1)
@@ -26,28 +24,6 @@ def MovePdf(file_path: str) -> None:
         print(f"File moved to {destination}")
     except Exception as e:
         print(f"Error moving file: {e}")
-
-def DocConvertPdf(file_path: str) -> None:
-    destination = os.path.join(os.getcwd(), 'data', 'raw', os.path.basename(file_path))
-    try:
-        doc2pdf.convert(file_path, destination)
-        print(f"File converted to PDF and saved to {destination}")
-    except Exception as e:
-        print(f"Conversion failed: {e}")
-
-def MoveExcel(file_path):
-    destination = os.path.join(os.getcwd(), 'data', 'raw', os.path.basename(file_path))
-    if file_path.endswith('.xlsx'):
-        shutil.move(file_path, destination)
-        print(f"File moved to {destination}")
-    elif file_path.endswith('.xls'):
-        try:
-            x2x = XLS2XLSX(file_path)
-            output_file_path = os.path.splitext(destination)[0] + ".xlsx"
-            x2x.to_xlsx(output_file_path)
-            print(f"File converted to XLSX: {output_file_path}")
-        except OSError as e:
-            print(f"Error converting to XLSX: {e}")
 
 def ImgConvertPdf(file_path: str) -> None:
     try:
@@ -65,10 +41,6 @@ def conversion(file_path: str) -> None:
 
     # Supported conversions
     conversion_functions = {
-        '.docx': DocConvertPdf,
-        '.doc': DocConvertPdf,
-        '.xlsx': MoveExcel,
-        '.xls': MoveExcel,
         '.jpeg': ImgConvertPdf,
         '.jpg': ImgConvertPdf,
         '.png': ImgConvertPdf,
@@ -88,9 +60,16 @@ def upload_file() -> None:
         print("Option clicked: --From device")
         root = tk.Tk()
         root.withdraw()
-        file_path = filedialog.askopenfilename(title="Select a file")
+        file_path = filedialog.askopenfilename(
+            title="Select a file",
+            filetypes=[
+                ('Supported files', '*.pdf *.jpg *.jpeg *.png *.tif *.tiff'),
+                ('PDF files', '*.pdf'),
+                ('Image files', '*.jpg *.jpeg *.png *.tif *.tiff'),
+            ],
+        )
         if file_path:
-            directories.create_root_folder_dir([r'data\raw'])
+            directories.create_root_folder_dir([os.path.join('data', 'raw')])
             conversion(file_path)
     except Exception as e:
         messagebox.showerror("Error", str(e))

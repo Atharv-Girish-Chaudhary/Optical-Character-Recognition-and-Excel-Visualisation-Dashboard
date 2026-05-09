@@ -35,6 +35,9 @@ def ocr_worker(cell_img):
 def extract_cells(image, final_table):
     """Extract cells using contours and apply OCR in parallel."""
     contours, _ = cv2.findContours(final_table, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
+    # Drop the outermost contour (table border) — largest by area
+    if len(contours) > 1:
+        contours = sorted(contours, key=cv2.contourArea, reverse=True)[1:]
     contours = sorted(contours, key=lambda c: cv2.boundingRect(c)[1])
 
     extracted_data = []
@@ -53,16 +56,21 @@ def extract_cells(image, final_table):
         results = list(executor.map(ocr_worker, cell_images))
 
     for (x, y, w, h), text in zip(coords, results):
-        extracted_data.append((x, y, w, h, text))
+        if text.strip():  # drop empty OCR results
+            extracted_data.append((x, y, w, h, text))
 
     return extracted_data
 
-def convert_table(image_path):
-    """Main function to process image and extract table data."""
-    image = cv2.imread(image_path)
-    if image is None:
-        print(f"Error: Unable to read image at {image_path}")
-        return
+def convert_table(image_or_path):
+    """Main function to process image and extract table data.
+    Accepts either a file path (str) or a numpy array."""
+    if isinstance(image_or_path, np.ndarray):
+        image = image_or_path
+    else:
+        image = cv2.imread(image_or_path)
+        if image is None:
+            print(f"Error: Unable to read image at {image_or_path}")
+            return
 
     # Resize for faster processing if image is large
     # if max(image.shape[:2]) > 1000:
@@ -78,12 +86,14 @@ def convert_table(image_path):
         data = [item[4] for item in df_data]
         dict_format['Extracted Data'] = data
         df = pd.DataFrame(dict_format)
-        output_path = r'data\output\Extracted_Table.csv'
+        output_dir = os.path.join('data', 'output')
+        os.makedirs(output_dir, exist_ok=True)
+        output_path = os.path.join(output_dir, 'Extracted_Table.csv')
         df.to_csv(output_path, index=False)
         print(f"Table data saved to {output_path}")
     else:
         print("No table data extracted.")
 
 if __name__ == '__main__':
-    image_path = r"data\processed\Final Test\Final Test_page_1.png"
+    image_path = os.path.join('data', 'samples', 'Test_1.png')
     convert_table(image_path)
