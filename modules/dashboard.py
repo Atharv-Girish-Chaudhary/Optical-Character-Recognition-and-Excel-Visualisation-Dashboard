@@ -28,14 +28,14 @@ def create_gui(df, columns_to_exclude=None):
     if columns_to_exclude is None:
         columns_to_exclude = []
 
-    root = tk.Tk()
+    root = tk.Toplevel()
     root.title("Dashboard")
     root.state('zoomed')
 
     # Ensure application exits properly on close
     def on_close():
-        print("Closing the application.")
-        root.quit()
+        print("Closing the dashboard.")
+        plt.close(fig)
         root.destroy()
 
     root.protocol("WM_DELETE_WINDOW", on_close)
@@ -87,8 +87,6 @@ def create_gui(df, columns_to_exclude=None):
         update_chart(selection, ax, df, canvas)
 
     combo.bind("<<ComboboxSelected>>", on_combo_change)
-
-    root.mainloop()
 
 def main():
     plt.rcParams["axes.prop_cycle"] = plt.cycler(color=["#4C2A85", "#BE96FF", "#957DAD", "#5E366E", "#A98CCC"])
