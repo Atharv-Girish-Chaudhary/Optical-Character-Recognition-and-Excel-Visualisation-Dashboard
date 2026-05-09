@@ -2,7 +2,7 @@
 
 A desktop GUI for extracting text and tables from PDFs and images using Tesseract OCR, with a built-in dashboard for visualizing tabular data.
 
-![Dashboard screenshot](data/gui/Desktop.png)
+![Main app window](data/gui/main_app.png)
 
 ## What it does
 
@@ -51,6 +51,8 @@ In the GUI:
 2. Toggle the **progress switch** in the right sidebar to run the OCR pipeline. Status messages appear in the terminal.
 3. When the pipeline finishes, the extracted CSV opens automatically.
 4. Click the **chart icon** in the left sidebar to launch the dashboard. If the pipeline hasn't been run yet, the dashboard falls back to bundled sample employee data.
+
+![Dashboard with sample employee data](data/gui/dashboard.png)
 
 ## Project structure
 
