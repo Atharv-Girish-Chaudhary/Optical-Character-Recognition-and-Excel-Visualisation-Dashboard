@@ -1,0 +1,21 @@
+# OCR + Excel Dashboard - Python Dependencies
+#
+# System dependencies (install separately before pip install):
+#   macOS:    brew install tesseract poppler
+#   Linux:    sudo apt install tesseract-ocr poppler-utils
+#   Windows:  install Tesseract from https://github.com/UB-Mannheim/tesseract/wiki
+#             install Poppler from https://github.com/oschwartz10612/poppler-windows
+#             (ensure both binaries are on PATH)
+#
+# Python: tested with 3.13. The pins below reflect a verified working
+# environment on macOS Apple Silicon. Other Python versions may work
+# but are unverified — adjust pins if needed.
+
+customtkinter==5.2.2
+matplotlib==3.10.8
+numpy==2.4.3
+opencv-python==4.13.0.92
+pandas==3.0.2
+pdf2image==1.17.0
+pillow==12.1.1
+pytesseract==0.3.13
