@@ -82,3 +82,11 @@ target/
 *.env.*.local
 
 
+# Pipeline runtime outputs (created by modules/directories.py at runtime)
+data/raw/
+data/processed/
+data/output/
+data/Files/
+
+# Local Claude Code settings
+.claude/
