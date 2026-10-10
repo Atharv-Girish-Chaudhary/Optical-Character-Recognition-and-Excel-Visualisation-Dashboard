@@ -9,7 +9,7 @@
 #
 # Python: tested with 3.13. The pins below reflect a verified working
 # environment on macOS Apple Silicon. Other Python versions may work
-# but are unverified — adjust pins if needed.
+# but are unverified; adjust pins if needed.
 
 customtkinter==5.2.2
 matplotlib==3.10.8

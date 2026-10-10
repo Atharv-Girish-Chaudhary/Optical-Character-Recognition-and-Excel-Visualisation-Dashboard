@@ -35,7 +35,7 @@ def ocr_worker(cell_img):
 def extract_cells(image, final_table):
     """Extract cells using contours and apply OCR in parallel."""
     contours, _ = cv2.findContours(final_table, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
-    # Drop the outermost contour (table border) — largest by area
+    # Drop the outermost contour (table border), largest by area
     if len(contours) > 1:
         contours = sorted(contours, key=cv2.contourArea, reverse=True)[1:]
     contours = sorted(contours, key=lambda c: cv2.boundingRect(c)[1])
